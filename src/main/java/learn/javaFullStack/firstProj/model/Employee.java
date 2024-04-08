@@ -1,7 +1,6 @@
 package learn.javaFullStack.firstProj.model;
 
 import java.io.Serializable;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +13,7 @@ public class Employee implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false,updatable=false)
-	private long ID;
+	private Long id;
 	private String Name;
 	private String Email;
 	private String JobTitle;
@@ -28,9 +27,9 @@ public class Employee implements Serializable {
 	public Employee() {
 	}
 	
-	public Employee(long iD, String name, String email, String jobTitle, String phone, String imageUrl,
+	public Employee(Long iD, String name, String email, String jobTitle, String phone, String imageUrl,
 			String empCode) {
-		ID = iD;
+		id = iD;
 		Name = name;
 		Email = email;
 		JobTitle = jobTitle;
@@ -41,11 +40,11 @@ public class Employee implements Serializable {
 	
 //	getters and setters
 	
-	public long getID() {
-		return ID;
+	public Long getid() {
+		return id;
 	}
-	public void setID(long iD) {
-		ID = iD;
+	public void setid(Long iD) {
+		id = iD;
 	}
 	public String getName() {
 		return Name;
@@ -88,7 +87,7 @@ public class Employee implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Employee [ID=" + ID + ", Name=" + Name + ", Email=" + Email + ", JobTitle=" + JobTitle + ", Phone="
+		return "Employee [id=" + id + ", Name=" + Name + ", Email=" + Email + ", JobTitle=" + JobTitle + ", Phone="
 				+ Phone + ", ImageUrl=" + ImageUrl + ", EmpCode=" + EmpCode + "]";
 	}
 	
